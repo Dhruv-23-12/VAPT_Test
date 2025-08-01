@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.plans {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan h3 {
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.plan button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #6772e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.plan button:hover {
+  background: #5469d4;
+}

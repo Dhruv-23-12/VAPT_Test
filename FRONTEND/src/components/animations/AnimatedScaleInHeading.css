@@ -1,0 +1,57 @@
+.scalein-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25em;
+}
+
+.scalein-word {
+  opacity: 0;
+  transform: scale(0.7) translateY(20px);
+  display: inline-block;
+  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.scalein-word.animate {
+  animation: scaleInFade 0.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slidein-char {
+  opacity: 0;
+  transform: translateX(-40px);
+  display: inline-block;
+}
+
+.slidein-char.animate {
+  animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes scaleInFade {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

@@ -1,0 +1,34 @@
+.slidein-heading {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.slidein-subheading {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  font-weight: 400;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #e0e7ef;
+}
+
+.slidein-char {
+  opacity: 0;
+  transform: translateX(-40px);
+  display: inline-block;
+  animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 

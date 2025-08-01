@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Choose a Subscription Plan</h1>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic Plan</h3>
+        <p>$299/month</p>
+        <button onclick="checkout('basic')">Subscribe</button>
+      </div>
+      <div class="plan">
+        <h3>Advance Plan</h3>
+        <p>$599/month</p>
+        <button onclick="checkout('advance')">Subscribe</button>
+      </div>
+      <div class="plan">
+        <h3>Team Plan</h3>
+        <p>$999/month</p>
+        <button onclick="checkout('team')">Subscribe</button>
+      </div>
+    </div>
+
+    <script>
+      async function checkout(plan) {
+        const response = await fetch('/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ plan: plan }),
+        });
+
+        const data = await response.json();
+
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert("Error: " + data.error);
+        }
+      }
+    </script>
+  </body>
+</html>
